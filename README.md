@@ -1,6 +1,6 @@
 # Agent Skills
 
-A collection of 28 [Claude Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) — reusable, model-invoked capabilities for Claude Code and the Claude apps. Heavy on design/frontend, plus research, writing, and skill-authoring tools.
+A collection of 27 [Claude Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) — reusable, model-invoked capabilities for Claude Code and the Claude apps. Heavy on design/frontend, plus research, writing, and skill-authoring tools.
 
 Each skill is a self-contained folder with a `SKILL.md` (its instructions) and any supporting scripts/data. Skills are grouped into categories below — open any category for details.
 
@@ -45,10 +45,10 @@ Turn designs into code, upgrade existing interfaces, and control generation outp
 
 `image-to-code-skill`, `output-skill`, `redesign-skill`, `stitch-skill`
 
-### [Content & Docs](skills/content-and-docs/) (4)
+### [Content & Docs](skills/content-and-docs/) (3)
 Writing, documents, and knowledge management.
 
-`decision`, `html-to-pdf`, `humanizer`, `wiki`
+`html-to-pdf`, `humanizer`, `wiki`
 
 ### [Research & Thinking](skills/research-and-thinking/) (5)
 Multi-angle research, decision pressure-testing, and analysis utilities.

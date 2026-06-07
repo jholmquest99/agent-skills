@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /* ========================================================================
+       PAGE / PRINT, change @page size to whatever your output needs.
+       Common values:
+         US Letter portrait:  8.5in 11in
+         US Letter landscape: 11in 8.5in
+         A4 portrait:         210mm 297mm
+         16:9 deck (1280x720): 13.333in 7.5in
+         16:9 deck (1920x1080): 20in 11.25in
+       ======================================================================== */
+    @page {
+      size: 13.333in 7.5in;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #000;
+      background: #2A3340; /* dark backdrop on screen, ignored in print */
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* One page wrapper per printed page. Width/height MUST match @page size. */
+    .page {
+      width: 13.333in;
+      height: 7.5in;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      background: #fff;
+      margin: 0 auto 24px auto;             /* on-screen gap; remove in print */
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25); /* on-screen only */
+      display: flex;
+      flex-direction: column;
+      padding: 0.5in;
+    }
+    .page:last-child { page-break-after: auto; }
+
+    /* Print: drop the on-screen scaffolding so paper output is clean. */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0 auto; }
+    }
+
+    h1 { font-size: 32pt; font-weight: 700; margin-bottom: 0.3in; }
+    h2 { font-size: 18pt; font-weight: 600; margin-bottom: 0.2in; }
+    p  { font-size: 12pt; line-height: 1.5; max-width: 7in; }
+  </style>
+</head>
+<body>
+
+  <section class="page">
+    <h1>Page 1</h1>
+    <p>Replace this content. Each <code>.page</code> renders as one page in the PDF.</p>
+  </section>
+
+  <section class="page">
+    <h1>Page 2</h1>
+    <p>Add as many <code>.page</code> sections as you need.</p>
+  </section>
+
+</body>
+</html>
